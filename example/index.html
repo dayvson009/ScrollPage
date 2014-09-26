@@ -36,15 +36,22 @@
 
 <script type="text/javascript">	
 
-new scrollPage.init({
-  'page' : '.spages' // Class onde existe os Id, (Paginas){ padrão => .spages }
-  ,'lnks' : '.sp-link' // Class onde existe os Id, (Paginas){ padrão => .sp-link }
-  ,'title' : ' - '+document.title // Estilo do titulo
-  ,'hash' : '!/' // Estilo do Hash
-  ,'duration' : '2000' // Duração de animação descendo
-  ,'afterPageFix' : 'page1'
-  
-});
+new scrollPage.init(	{
+		title 	: ''
+		,page 	: '.spages' 
+		,lnks 	: '.sp-link'
+		,hash 	: '!/'
+		,total 	: 0
+		,name 	: []
+		,top 		: []
+		,height : []
+		,parentMenu : 'menu'
+		,afterPageFix : 'inicio'
+		,classFix : 'fix'
+		,navClass : 'active'
+		,data_atribute : 'data-name'
+		,duration : '500'
+	},);
 
 </script>
 
