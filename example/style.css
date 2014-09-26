@@ -1,0 +1,19 @@
+body{margin:0;}
+
+div{height:500px;text-align: center;font-size: 2em;text-transform: uppercase; padding-top:50px;}
+
+.div1{background:#fad451;}
+.div2{background:#aaa451;}
+.div3{background:#1adccc;}
+.div4{background:#faacc1;}
+.div5{background:#55d451;}
+.div6{background:#dada51;}
+.div7{background:#fa5421;}
+
+#menu{text-align: center;background:#fff;width:100%;}
+
+.fix{position: fixed;top:0;}
+
+.nav-active{
+	color:#0f0;
+}
