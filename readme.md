@@ -92,3 +92,8 @@ new scrollPage.init({
 *  `'classFix' : 'fix'` Define a Classe que vai ser adicionada para o menu ficar fixo, se a opção acima for diferente de `false`
 
 *  `'duration' : '500'` Define o tempo do Scrolling da pagina.
+
+
+# Atenção! / Attention! / Caution! / Aviso!
+
+## Não Coloque o css `zoom` no `body` e nem no `html`
