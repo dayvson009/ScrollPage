@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-brs">
 <head>
 	<title>ScrollPages</title>
+	
+	<meta charset="utf-8">
+
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <nav id="menu" class="">
-	<a href="" class="sp-link" data-name="page1">page1 / </a>
-	<a href="" class="sp-link" data-name="page2">page2 / </a>
-	<a href="" class="sp-link" data-name="page3">page3 / </a>
-	<a href="" class="sp-link" data-name="page4">page4 / </a>
-	<a href="" class="sp-link" data-name="page5">page5 / </a>
-	<a href="" class="sp-link" data-name="page6">page6 / </a>
-	<a href="" class="sp-link" data-name="page7">page7 / </a>
+	<ul>
+		<li> <a href="" class="sp-link" data-name="page1">page1 / </a> </li>
+		<li> <a href="" class="sp-link" data-name="page2">page2 / </a> </li>
+		<li> <a href="" class="sp-link" data-name="page3">page3 / </a> </li>
+		<li> <a href="" class="sp-link" data-name="page4">page4 / </a> </li>
+		<li> <a href="" class="sp-link" data-name="page5">page5 / </a> </li>
+		<li> <a href="" class="sp-link" data-name="page6">page6 / </a> </li>
+		<li> <a href="" class="sp-link" data-name="page7">page7 / </a> </li>
+	</ul>
 </nav>
 
 <div class="div1 spages" id="page1">Page1</div>
@@ -28,15 +34,14 @@
 <div class="div6 spages" id="page6">Page6</div>
 
 <div class="div7 spages" id="page7">Page7</div>
+s
 
-
-
-<script type="text/javascript" src="scrollpages.js"></script>	
-<script type="text/javascript" src="classie.js"></script>	
+<script src="scrollpages.js"></script>	
+<script src="classie.js"></script>	
 
 <script type="text/javascript">	
 
-new scrollPage.init(	{
+new scrollPage.init({
 		title 	: ''
 		,page 	: '.spages' 
 		,lnks 	: '.sp-link'
@@ -51,7 +56,7 @@ new scrollPage.init(	{
 		,navClass : 'active'
 		,data_atribute : 'data-name'
 		,duration : '500'
-	},);
+	});
 
 </script>
 
