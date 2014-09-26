@@ -6,13 +6,13 @@
 </head>
 <body>
 <nav id="menu" class="">
-	<a href="" class="sp-link" data-name="page1">page1 / </a>
-	<a href="" class="sp-link" data-name="page2">page2 / </a>
-	<a href="" class="sp-link" data-name="page3">page3 / </a>
-	<a href="" class="sp-link" data-name="page4">page4 / </a>
-	<a href="" class="sp-link" data-name="page5">page5 / </a>
-	<a href="" class="sp-link" data-name="page6">page6 / </a>
-	<a href="" class="sp-link" data-name="page7">page7 / </a>
+	<a href="" class="sp-link" title="Page 1" data-name="page1">page1 / </a>
+	<a href="" class="sp-link" title="Page 2" data-name="page2">page2 / </a>
+	<a href="" class="sp-link" title="Page 3" data-name="page3">page3 / </a>
+	<a href="" class="sp-link" title="Page 4" data-name="page4">page4 / </a>
+	<a href="" class="sp-link" title="Page 5" data-name="page5">page5 / </a>
+	<a href="" class="sp-link" title="Page 6" data-name="page6">page6 / </a>
+	<a href="" class="sp-link" title="Page 7" data-name="page7">page7 / </a>
 </nav>
 
 <div class="div1 spages" id="page1">Page1</div>
@@ -36,22 +36,20 @@
 
 <script type="text/javascript">	
 
-new scrollPage.init(	{
-		title 	: ''
-		,page 	: '.spages' 
-		,lnks 	: '.sp-link'
-		,hash 	: '!/'
-		,total 	: 0
-		,name 	: []
-		,top 		: []
-		,height : []
-		,parentMenu : 'menu'
-		,afterPageFix : 'inicio'
-		,classFix : 'fix'
-		,navClass : 'active'
-		,data_atribute : 'data-name'
-		,duration : '500'
-	},);
+new scrollPage.init({
+	'title' 				: ' - '+document.title
+	,'attr_title' 	: 'title'
+	,'page' 				: '.spages' 
+	,'classlnk' 		: '.sp-link'
+	,'hash' 				: '!/'
+	,'parentMenu' 	: 'menu'
+	,'afterFix' 		: 'page1'
+	,'classFix' 		: 'fix'
+	,'classActive' 	: 'active'
+	,'data_atribute': 'data-name'
+	,'duration' 		: '500'
+});
+
 
 </script>
 

@@ -11,8 +11,10 @@ var scrollPage =
 
 	config :
 	{
-		title 	: ''// Estilo do titulo padrão [' - '+document.title]
+		title 	: ' - '+document.title // Estilo do titulo padrão [' - '+document.title]
+		,attr_title : 'title' // nome do atributo que será o titulo Bonitinho Com acento.
 		,page 	: '.spages' // está classe fica em todas as paginas que tem id, serve para que o plugin identifique o local exato do elemento
+		,classlnk 	: '.sp-link' // está class fica no link a ser clicado para chamar a pagina
 		,lnks 	: '.sp-link' // está class fica no link a ser clicado para chamar a pagina
 		,hash 	: '!/'//opções 'false -> nao mostra' ou Personalize
 		,total 	: 0 // é a variavel do total de paginas com a class '.spages'
@@ -20,9 +22,9 @@ var scrollPage =
 		,top 		: [] // Array do topo de cada pagina
 		,height : [] // Array do tamanho das paginas.
 		,parentMenu : 'menu' // Id do pai que ficará fixo.
-		,afterPageFix : 'inicio' // depois de que pagina ele ficara fixo?
+		,afterFix : 'inicio' // depois de que pagina ele ficara fixo? ou false ele nao faz nada
 		,classFix : 'fix' // Class que vai adicionar no menu para ficar fixo.
-		,navClass : 'nav-active' // class 'active' do menu
+		,classActive : 'nav-active' // class 'active' do menu
 		,data_atribute : 'data-name' // Atributo que fica no link a ser Clicado, indica pra qual id 
 		,duration : '500' // Duração da animação Scrolling.
 	},
@@ -39,7 +41,7 @@ var scrollPage =
 			}
 		}
 
-		scrollPage.config.lnks = document.querySelectorAll(scrollPage.config.lnks);
+		scrollPage.config.lnks = document.querySelectorAll(scrollPage.config.classlnk);
 		
     	scrollPage.onScroll();
 
@@ -92,7 +94,8 @@ var scrollPage =
 	},
 
 	titlePage : function(name){
-	  document.title = name + scrollPage.config.title;
+		var title = document.querySelector(scrollPage.config.classlnk+'['+scrollPage.config.data_atribute+'='+name+']').getAttribute(scrollPage.config.attr_title);
+	  document.title = title + scrollPage.config.title;
 	},
 
 	goTo : function(name)
@@ -152,26 +155,28 @@ var scrollPage =
 	},
 
 	menufix : function(name){
+		if(scrollPage.config.afterFix){
+
+			var menu = document.getElementById(scrollPage.config.parentMenu);
+			var pageAfter = document.getElementById(scrollPage.config.afterFix);
+
+			if(name != scrollPage.config.afterFix){ classie.add(menu,scrollPage.config.classFix); pageAfter.style.marginTop = (menu.offsetHeight+1)+'px'; }else{ classie.remove(menu,scrollPage.config.classFix); pageAfter.style.marginTop = 0;}
 		
-		var menu = document.getElementById(scrollPage.config.parentMenu);
-		var pageAfter = document.getElementById(scrollPage.config.afterPageFix);
-		console.log(menu.offsetHeight)
-		if(name != scrollPage.config.afterPageFix){ classie.add(menu,scrollPage.config.classFix); pageAfter.style.marginTop = menu.offsetHeight+'px'; }else{ classie.remove(menu,scrollPage.config.classFix); pageAfter.style.marginTop = 0;}
+		}
 	},
 	
 	active : function(name){
 
 		for (var i = 0; i < scrollPage.config.lnks.length; i++) {
 			
-			classie.remove(scrollPage.config.lnks[i],scrollPage.config.navClass)			
+			classie.remove(scrollPage.config.lnks[i],scrollPage.config.classActive)			
 
 			if(name == scrollPage.config.lnks[i].getAttribute(scrollPage.config.data_atribute)){
 
-				classie.add(scrollPage.config.lnks[i],scrollPage.config.navClass)
+				classie.add(scrollPage.config.lnks[i],scrollPage.config.classActive)
 			}
 		};
 	}
-
 	
 
 };
