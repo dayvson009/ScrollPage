@@ -4,4 +4,8 @@ O [ScrollPages JS](https://github.com/dayvson009/ScrollPage) é utilizado para s
 
 ### Dependência
 
+<<<<<<< HEAD
+*  [Classie.js](https://github.com/dayvson009/ScrollPage/blob/readme.md/example/classie.js) é utilizado para (adicionar / remover / verificar ) Classe. 
+=======
 *[Classie.js](https://github.com/dayvson009/ScrollPage/blob/readme.md/example/classie.js) é utilizado para (adicionar / remover / verificar ) Classe. 
+>>>>>>> parent of 3da9e19... readme
