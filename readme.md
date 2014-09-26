@@ -51,17 +51,17 @@ Modo de chamar pelo JS
 
 new scrollPage.init({
 
-	'title' 				: ' - '+document.title
+	'title' : ' - '+document.title
 	,'attr_title' 	: 'title'
-	,'page' 				: '.spages' 
-	,'classlnk' 		: '.sp-link'
-	,'hash' 				: '!/'
+	,'page' 		: '.spages' 
+	,'classlnk' 	: '.sp-link'
+	,'hash' 	: '!/'
 	,'parentMenu' 	: 'menu'
-	,'afterFix' 		: 'page1'
-	,'classFix' 		: 'fix'
+	,'afterFix' 	: 'page1'
+	,'classFix' 	: 'fix'
 	,'classActive' 	: 'active'
 	,'data_atribute': 'data-name'
-	,'duration' 		: '500'
+	,'duration' 	: '500'
 
 });
 
