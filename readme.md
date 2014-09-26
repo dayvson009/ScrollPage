@@ -51,11 +51,11 @@ Modo de chamar pelo JS
 
 new scrollPage.init({
 
-	'title' : ' - '+document.title
+	'title' 		: ' - '+document.title
 	,'attr_title' 	: 'title'
 	,'page' 		: '.spages' 
 	,'classlnk' 	: '.sp-link'
-	,'hash' 	: '!/'
+	,'hash' 		: '!/'
 	,'parentMenu' 	: 'menu'
 	,'afterFix' 	: 'page1'
 	,'classFix' 	: 'fix'
