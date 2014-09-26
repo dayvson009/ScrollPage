@@ -93,7 +93,3 @@ new scrollPage.init({
 
 *  `'duration' : '500'` Define o tempo do Scrolling da pagina.
 
-
-# Atenção! / Attention! / Caution! / Aviso!
-
-## Não Coloque o css `zoom` no `body` e nem no `html`
