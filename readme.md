@@ -132,4 +132,5 @@ var hashtag = /#\S+/; //Expressão regular.
 match = this.href.match(hashtag); // Pega o href com "#!/".
 ga('send', 'pageview', '/' + match[0]); // Coloca no google analytic.
 ```
+
 Veja mais em [Google Analytic Unipage](http://mediacause.org/track-anchor-tags-google-analytics-2/)
