@@ -112,6 +112,11 @@ var scrollPage =
 
 			scrollPage.config.lnks[i].onclick = function(){
 				scrollPage.goTo(this.getAttribute(scrollPage.config.data_atribute));
+
+				var hashtag = /#\S+/;
+				match = this.href.match(hashtag);
+				ga('send', 'pageview', '/' + match[0]);
+				
 				return false;
 			}
 		};

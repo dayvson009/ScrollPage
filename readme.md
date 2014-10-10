@@ -93,3 +93,42 @@ new scrollPage.init({
 
 *  `'duration' : '500'` Define o tempo do Scrolling da pagina.
 
+
+### SEO - Google Analytic.
+
+Para que o [Google Analytic](http://www.google.com/intl/pt-BR/analytics/) reconheça as "Ancoras" via "Hash", é preciso Acrescentar alguns parâmetros ao código do index:
+
+```js
+<script>
+(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+e.src='//www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+
+ga('create','UA-XXXXXX-X',{'allowAnchor':true});
+ga('send','pageview',{'page':location.pathname + location.search + location.hash});
+</script>
+
+```
+#### Antes
+
+```js
+ga('create','UA-XXXXXX-X');
+ga('send','pageview');
+```
+
+#### Depois
+
+```js
+ga('create','UA-XXXXXX-X',{'allowAnchor':true});
+ga('send','pageview',{'page':location.pathname + location.search + location.hash});
+```
+
+Foi acrescentado a função `Click` do `ScrollPages` a seguinte linha de codigo:
+
+```js
+var hashtag = /#\S+/; //Expressão regular.
+match = this.href.match(hashtag); // Pega o href com "#!/".
+ga('send', 'pageview', '/' + match[0]); // Coloca no google analytic.
+```
