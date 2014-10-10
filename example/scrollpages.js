@@ -80,9 +80,10 @@ var scrollPage =
 				if( spScroll+1 > scrollPage.config.top[i] && spScroll < scrollPage.config.top[i] + scrollPage.config.height[i]){
 
 			    scrollPage.hash(scrollPage.config.name[i]);
-        		scrollPage.titlePage(scrollPage.config.name[i]);
+        	scrollPage.titlePage(scrollPage.config.name[i]);
 	  			scrollPage.menufix(scrollPage.config.name[i])
 	  			scrollPage.active(scrollPage.config.name[i])
+					
 			}
 		}  
 	},
