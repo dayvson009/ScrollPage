@@ -6,13 +6,13 @@
 </head>
 <body>
 <nav id="menu" class="">
-	<a href="" class="sp-link" title="Page 1" data-name="page1">page1 / </a>
-	<a href="" class="sp-link" title="Page 2" data-name="page2">page2 / </a>
-	<a href="" class="sp-link" title="Page 3" data-name="page3">page3 / </a>
-	<a href="" class="sp-link" title="Page 4" data-name="page4">page4 / </a>
-	<a href="" class="sp-link" title="Page 5" data-name="page5">page5 / </a>
-	<a href="" class="sp-link" title="Page 6" data-name="page6">page6 / </a>
-	<a href="" class="sp-link" title="Page 7" data-name="page7">page7 / </a>
+	<a href="#!/page1" class="sp-link" title="Page 1" data-name="page1">page1 / </a>
+	<a href="#!/page2" class="sp-link" title="Page 2" data-name="page2">page2 / </a>
+	<a href="#!/page3" class="sp-link" title="Page 3" data-name="page3">page3 / </a>
+	<a href="#!/page4" class="sp-link" title="Page 4" data-name="page4">page4 / </a>
+	<a href="#!/page5" class="sp-link" title="Page 5" data-name="page5">page5 / </a>
+	<a href="#!/page6" class="sp-link" title="Page 6" data-name="page6">page6 / </a>
+	<a href="#!/page7" class="sp-link" title="Page 7" data-name="page7">page7 / </a>
 </nav>
 
 <div class="div1 spages" id="page1">Page1</div>
@@ -51,6 +51,17 @@ new scrollPage.init({
 });
 
 
+</script>
+
+<script>
+(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+e.src='//www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+
+ga('create','UA-XXXXXX-X',{'allowAnchor':true});
+ga('send','pageview',{'page':location.pathname + location.search + location.hash});
 </script>
 
 </body>

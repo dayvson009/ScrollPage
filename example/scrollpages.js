@@ -116,7 +116,7 @@ var scrollPage =
 				var hashtag = /#\S+/;
 				match = this.href.match(hashtag);
 				ga('send', 'pageview', '/' + match[0]);
-				
+
 				return false;
 			}
 		};
