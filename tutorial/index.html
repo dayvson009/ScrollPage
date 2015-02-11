@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>ScrollPages</title>
+	
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="menu" class="">
+	<ul>
+		<li> <a href="" class="sp-link" data-name="page1">page1 / </a> </li>
+		<li> <a href="" class="sp-link" data-name="page2">page2 / </a> </li>
+		<li> <a href="" class="sp-link" data-name="page3">page3 / </a> </li>
+		<li> <a href="" class="sp-link" data-name="page4">page4 / </a> </li>
+		<li> <a href="" class="sp-link" data-name="page5">page5 / </a> </li>
+		<li> <a href="" class="sp-link" data-name="page6">page6 / </a> </li>
+		<li> <a href="" class="sp-link" data-name="page7">page7 / </a> </li>
+	</ul>
+</nav>
+
+<div class="div1 spages" id="page1">Page1</div>
+
+<div class="div2 spages" id="page2">Page2</div>
+
+<div class="div3 spages" id="page3">Page3</div>
+
+<div class="div4 spages" id="page4">Page4</div>
+
+<div class="div5 spages" id="page5">Page5</div>
+
+<div class="div6 spages" id="page6">Page6</div>
+
+<div class="div7 spages" id="page7">Page7</div>
+
+<script src="scrollpages.js"></script>	
+<script src="classie.js"></script>	
+
+<script type="text/javascript">	
+
+new scrollPage.init({
+		title 	: ''
+		,page 	: '.spages' 
+		,lnks 	: '.sp-link'
+		,hash 	: '!/'
+		,total 	: 0
+		,name 	: []
+		,top 		: []
+		,height : []
+		,parentMenu : 'menu'
+		,afterPageFix : 'inicio'
+		,classFix : 'fix'
+		,navClass : 'active'
+		,data_atribute : 'data-name'
+		,duration : '500'
+	});
+
+</script>
+
+</body>
+</html>
