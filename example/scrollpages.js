@@ -72,7 +72,7 @@ var scrollPage =
 
 	loadPage : function()
 	{
-		spScroll = document.documentElement.scrollTop;
+		spScroll = window.pageYOffset || document.documentElement.scrollTop;
 
        for(var i=0;i < scrollPage.config.total; i++){
 				if( spScroll+1 > scrollPage.config.top[i] && spScroll < scrollPage.config.top[i] + scrollPage.config.height[i]){
