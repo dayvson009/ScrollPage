@@ -1,0 +1,8 @@
+title: Scrollpage
+description: Plugin ScrollPage v 0.1
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-cayman
+
+gems:
+  - jekyll-mentions
